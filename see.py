@@ -20,14 +20,8 @@ os.environ["http_proxy"] = "http://localhost:7890"
 os.environ["https_proxy"] = "http://localhost:7890"
 
 """设置你的 gpt的API 密钥"""
-client = OpenAI(api_key = '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')#用刚才复制的api key替换单引号里面的内容
-dashscope.api_key='sk-5bac458e44ee4ae0954f91b289c680d1'
-
-# """ 你的百度的 APPID AK SK """
-# APP_ID = '46674980'
-# API_KEY = '45hw8BVQbZ5T4QsRp4pFj44j'
-# SECRET_KEY = 'pK7G004BLvt0dvgRO6rYgxnpQIAZiSc5'
-# client = AipImageClassify(APP_ID, API_KEY, SECRET_KEY)
+client = OpenAI(api_key = '****************************************')#用刚才复制的api key替换单引号里面的内容
+dashscope.api_key='*******************************'
 
 
 """ 下面是摄像头的进程 """
