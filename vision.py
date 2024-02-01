@@ -5,9 +5,9 @@ print("当前工作目录:", os.getcwd())
 
 
 """ 你的 APPID AK SK """
-APP_ID = '46674980'
-API_KEY = '45hw8BVQbZ5T4QsRp4pFj44j'
-SECRET_KEY = 'pK7G004BLvt0dvgRO6rYgxnpQIAZiSc5'
+APP_ID = '***************'
+API_KEY = '*****************'
+SECRET_KEY = '******************'
 
 client = AipImageClassify(APP_ID, API_KEY, SECRET_KEY)
 
