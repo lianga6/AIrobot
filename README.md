@@ -24,3 +24,8 @@ https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings
 2.其次是摄像头的问题，我的树莓派的默认摄像头接口坏了，所以买了一个免驱的USB摄像头，一般来说默认的摄像头ID就是0，即cap = cv2.VideoCapture(0)，但有时候也不一定，所以可能需要你用cameraID.py来测试出摄像头的ID。
 3.最后是whisper下载的问题，一定要注意下载的是openai的whisper，不然会吃大亏。
 4.既然使用了openai的API，你懂的
+
+
+视频：https://github.com/lianga6/AIrobot/assets/117170749/9da16bfc-1469-4460-82c3-ac1e33b3063d
+
+
