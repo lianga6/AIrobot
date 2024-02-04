@@ -129,7 +129,7 @@ def chat_with_gpt():
 def encode_image(image_path):
   with open(image_path, "rb") as image_file:
     return base64.b64encode(image_file.read()).decode('utf-8')
-api_key = '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'
+api_key = '****************'
 def gptvision1(prompt):
     # Path to your image
     # image_path = "example1.jpg"
