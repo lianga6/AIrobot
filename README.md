@@ -9,7 +9,7 @@
 代码中你需要改的是：
 client = OpenAI(api_key = '**********************') 和 dashscope.api_key='***********************'  
 这两个api的获取参考：
-https://zhuanlan.zhihu.com/p/640573773
+https://zhuanlan.zhihu.com/p/640573773  
 https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings  
 然后直接运行就行，它一定会有error，因为有很多需要的库你没有下载，比如pygame，cv，whisper啊啥的，你只需要pip intall这些库就好啦
 
