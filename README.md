@@ -14,7 +14,7 @@ client = OpenAI(api_key = '**********************') 和 dashscope.api_key='*****
 https://zhuanlan.zhihu.com/p/640573773  
 https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings    
 
-然后直接运行see1.py文件就行，它一定会有error，因为有很多需要的库你没有下载，比如pygame，cv，whisper啊啥的，你只需要pip intall这些库就好啦
+然后直接运行see1.py文件就行，它一定会有error，因为有很多需要的库你没有下载，比如pygame，cv，whisper啊啥的，你只需要在Python终端中pip intall这些库就好啦
 
   
 ## 下面是遇到的问题及解决办法  :blush:
