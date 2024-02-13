@@ -3,14 +3,15 @@
 
 本项目可在你的PC上运行，Windows系统和Linux系统都可以，也可以在树莓派这样的嵌入式系统上运行。  
 
-如果你需要在树莓派这样的嵌入式系统上运行，那么你需要自己准备麦克风，扬声器和摄像头（最好都准备免驱的）  
+如果你在你的PC上运行，那么将非常轻松，如果你需要在树莓派这样的嵌入式系统上运行，那么你需要自己准备麦克风，扬声器和摄像头（最好都准备免驱的）  
 主要使用的代码文件时see.py,see1.py更完善，后续会进行see2.py的编写，see2.py的前身是vision.py, see2.py会加入专业的某些场景识别，比如菜品识别，车辆识别，logo识别等等  
 
 代码中你需要改的是：
 client = OpenAI(api_key = '***********************) 和 dashscope.api_key='***********************'  
 这两个api的获取参考：
 https://zhuanlan.zhihu.com/p/640573773
-https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings
+https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings  
+然后直接运行就行，它一定会有error，因为有很多需要的库你没有下载，比如pygame，cv，whisper啊啥的，你只需要pip intall这些库就好啦
 
   
 下面是遇到的问题及解决办法  :blush:
@@ -32,7 +33,7 @@ https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings
 
 5.关于openai.APIConnectionError: Connection error的解决：  
   找到_base_client.py文件中的BaseClient类，把init中原本的self._proxies=proxies修改为self._proxies = {'http': 'http://localhost:7890','https': 'http://localhost:7890'}  
-  在自己的测试代码中加入：
+  在自己的测试代码中加入（下面这几句代码中都有）：
   import os  
   os.environ["http_proxy"] = "http://localhost:7890"  
   os.environ["https_proxy"] = "http://localhost:7890"  
