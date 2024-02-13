@@ -41,7 +41,7 @@ https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings
 
 
 
-  ![error](https://github.com/lianga6/AIrobot/assets/117170749/9da16bfc-1469-4460-82c3-ac1e33b3063d "title")
+  [error](https://github.com/lianga6/AIrobot/assets/117170749/9da16bfc-1469-4460-82c3-ac1e33b3063d "点我观看演示视频")
 
 
 
