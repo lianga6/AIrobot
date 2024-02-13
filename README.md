@@ -6,6 +6,8 @@
 如果你在你的PC上运行，那么将非常轻松，如果你需要在树莓派这样的嵌入式系统上运行，那么你需要自己准备麦克风，扬声器和摄像头（最好都准备免驱的）  
 主要使用的代码文件时see.py,see1.py更完善，比see.py的聊天模式多了一个记忆功能，后续会进行see2.py的编写，see2.py的前身是vision.py, see2.py会加入专业的某些场景识别，比如菜品识别，车辆识别，logo识别等等  
 
+## 下面是运行本项目的方法  
+
 代码中你需要改的是：
 client = OpenAI(api_key = '**********************') 和 dashscope.api_key='***********************'  
 这两个api的获取参考：  
@@ -15,7 +17,7 @@ https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings
 然后直接运行see1.py文件就行，它一定会有error，因为有很多需要的库你没有下载，比如pygame，cv，whisper啊啥的，你只需要pip intall这些库就好啦
 
   
-##[下面是遇到的问题及解决办法]  :blush:
+## 下面是遇到的问题及解决办法  :blush:
 
 1.首先是alsa的问题，比如说找不到声卡啊什么的，因为alsa默认设置时声卡0，而此项目麦克风使用的是声卡3，可通过aplay -l显示出来，扬声器使用的是声卡2，可通过arecord -l来显示出来。自定义配置的话是修改配置文件~/.asoundrc或者文件/etc/asound.conf（已经在上面代码中了）
   判断是哪个声卡录音可以使用arecord -D hw:3,0 -r 44100 -f S16_LE test2.wav命令来进行测试，其中那个3是声卡的ID，可用arecord -l来看，0是device（一般都是0）
