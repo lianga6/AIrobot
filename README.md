@@ -46,6 +46,6 @@ https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings
 
 
 
-视频：https://github.com/lianga6/AIrobot/assets/117170749/9da16bfc-1469-4460-82c3-ac1e33b3063d
+若卡顿则打开视频链接：https://github.com/lianga6/AIrobot/assets/117170749/9da16bfc-1469-4460-82c3-ac1e33b3063d
 
 
