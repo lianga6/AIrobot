@@ -4,13 +4,14 @@
 本项目可在你的PC上运行，Windows系统和Linux系统都可以，也可以在树莓派这样的嵌入式系统上运行。  
 
 如果你在你的PC上运行，那么将非常轻松，如果你需要在树莓派这样的嵌入式系统上运行，那么你需要自己准备麦克风，扬声器和摄像头（最好都准备免驱的）  
-主要使用的代码文件时see.py,see1.py更完善，后续会进行see2.py的编写，see2.py的前身是vision.py, see2.py会加入专业的某些场景识别，比如菜品识别，车辆识别，logo识别等等  
+主要使用的代码文件时see.py,see1.py更完善，比see.py的聊天模式多了一个记忆功能，后续会进行see2.py的编写，see2.py的前身是vision.py, see2.py会加入专业的某些场景识别，比如菜品识别，车辆识别，logo识别等等  
 
 代码中你需要改的是：
 client = OpenAI(api_key = '**********************') 和 dashscope.api_key='***********************'  
-这两个api的获取参考：
+这两个api的获取参考：  
 https://zhuanlan.zhihu.com/p/640573773  
-https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings  
+https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings    
+
 然后直接运行就行，它一定会有error，因为有很多需要的库你没有下载，比如pygame，cv，whisper啊啥的，你只需要pip intall这些库就好啦
 
   
