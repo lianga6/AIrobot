@@ -20,11 +20,11 @@ https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings
 1.首先是alsa的问题，比如说找不到声卡啊什么的，因为alsa默认设置时声卡0，而此项目麦克风使用的是声卡3，可通过aplay -l显示出来，扬声器使用的是声卡2，可通过arecord -l来显示出来。自定义配置的话是修改配置文件~/.asoundrc或者文件/etc/asound.conf（已经在上面代码中了）
   判断是哪个声卡录音可以使用arecord -D hw:3,0 -r 44100 -f S16_LE test2.wav命令来进行测试，其中那个3是声卡的ID，可用arecord -l来看，0是device（一般都是0）
   判断是哪个声卡播音可以使用aplay -D hw:0,0 test.wav命令来进行测试
-  可参考文献 https://blog.csdn.net/weixin_41965270/article/details/81272710
-            https://blog.csdn.net/lile777/article/details/62428473
-            https://wiki.archlinuxcn.org/wiki/ALSA/%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94#%E9%BA%A6%E5%85%8B%E9%A3%8E
-            https://www.alsa-project.org/main/index.php/Asoundrc
-            https://www.cnblogs.com/spjy/p/7085281.html  
+  可参考文献 https://blog.csdn.net/weixin_41965270/article/details/81272710  
+            https://blog.csdn.net/lile777/article/details/62428473  
+            https://wiki.archlinuxcn.org/wiki/ALSA/%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94#%E9%BA%A6%E5%85%8B%E9%A3%8E  
+            https://www.alsa-project.org/main/index.php/Asoundrc  
+            https://www.cnblogs.com/spjy/p/7085281.html    
               
 2.其次是摄像头的问题，我的树莓派的默认摄像头接口坏了，所以买了一个免驱的USB摄像头，一般来说默认的摄像头ID就是0，即cap = cv2.VideoCapture(0)，但有时候也不一定，所以可能需要你用cameraID.py来测试出摄像头的ID。  
 
