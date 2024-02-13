@@ -20,10 +20,24 @@ https://help.aliyun.com/zh/dashscope/developer-reference/api-key-settings
             https://blog.csdn.net/lile777/article/details/62428473
             https://wiki.archlinuxcn.org/wiki/ALSA/%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94#%E9%BA%A6%E5%85%8B%E9%A3%8E
             https://www.alsa-project.org/main/index.php/Asoundrc
-            https://www.cnblogs.com/spjy/p/7085281.html
-2.其次是摄像头的问题，我的树莓派的默认摄像头接口坏了，所以买了一个免驱的USB摄像头，一般来说默认的摄像头ID就是0，即cap = cv2.VideoCapture(0)，但有时候也不一定，所以可能需要你用cameraID.py来测试出摄像头的ID。
-3.最后是whisper下载的问题，一定要注意下载的是openai的whisper，不然会吃大亏。
-4.既然使用了openai的API，你懂的
+            https://www.cnblogs.com/spjy/p/7085281.html  
+              
+2.其次是摄像头的问题，我的树莓派的默认摄像头接口坏了，所以买了一个免驱的USB摄像头，一般来说默认的摄像头ID就是0，即cap = cv2.VideoCapture(0)，但有时候也不一定，所以可能需要你用cameraID.py来测试出摄像头的ID。  
+
+3.最后是whisper下载的问题，一定要注意下载的是openai的whisper，不然会吃大亏。  
+
+4.既然使用了openai的API，你懂的  
+
+5.关于openai.APIConnectionError: Connection error的解决：  
+  找到_base_client.py文件中的BaseClient类，把init中原本的self._proxies=proxies修改为self._proxies = {'http': 'http://localhost:7890','https': 'http://localhost:7890'}  
+  在自己的测试代码中加入：
+  import os  
+  os.environ["http_proxy"] = "http://localhost:7890"  
+  os.environ["https_proxy"] = "http://localhost:7890"  
+  参考文献  https://blog.csdn.net/Oooops_/article/details/134811558
+
+
+
 
 
 视频：https://github.com/lianga6/AIrobot/assets/117170749/9da16bfc-1469-4460-82c3-ac1e33b3063d
